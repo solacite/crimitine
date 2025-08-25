@@ -1,14 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3rgpalmvxyvy"]
+[gd_scene load_steps=5 format=3 uid="uid://c3rgpalmvxyvy"]
 
 [ext_resource type="Texture2D" uid="uid://dsq42kxajv63w" path="res://assets/textures/texture_01.tres" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://bruvi817ppll6" path="res://scripts/player.gd" id="2_0wfyh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0wfyh"]
 albedo_texture = ExtResource("1_o5qli")
 uv1_triplanar = true
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_o5qli"]
+
 [node name="Main" type="Node3D"]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
 
 [node name="Floor" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, 2.19962, -0.758539, 18.0749)
@@ -25,3 +29,13 @@ transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, 4.15535, 26
 operation = 2
 size = Vector3(12.4801, 4.95356, 5.81222)
 material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="Player" type="CharacterBody3D" parent="."]
+script = ExtResource("2_0wfyh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851316, 0)
+shape = SubResource("CapsuleShape3D_o5qli")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.41872, 0)
