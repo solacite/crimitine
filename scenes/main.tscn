@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3rgpalmvxyvy"]
+
+[ext_resource type="Texture2D" uid="uid://dsq42kxajv63w" path="res://assets/textures/texture_01.tres" id="1_o5qli"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0wfyh"]
+albedo_texture = ExtResource("1_o5qli")
+uv1_triplanar = true
+
+[node name="Main" type="Node3D"]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+
+[node name="Floor" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, 2.19962, -0.758539, 18.0749)
+size = Vector3(38.5021, 0.358521, 38.0447)
+material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="Building" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, 6.931, 18.5278, -18.1438)
+size = Vector3(7.72127, 16.6685, 7.41537)
+material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="Building2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, 4.15535, 26.3806, -18.173)
+operation = 2
+size = Vector3(12.4801, 4.95356, 5.81222)
+material = SubResource("StandardMaterial3D_0wfyh")
