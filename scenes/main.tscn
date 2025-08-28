@@ -58,25 +58,108 @@ operation = 2
 size = Vector3(12.4801, 4.95356, 5.81222)
 material = SubResource("StandardMaterial3D_0wfyh")
 
+[node name="StairHole" type="CSGBox3D" parent="World"]
+transform = Transform3D(5.59307, 0, 0, 0, 5.59307, 0, 0, 0, 5.59307, -1.33099, -0.86162, -1.47553)
+operation = 2
+size = Vector3(1.20286, 0.317577, 0.803948)
+material = SubResource("StandardMaterial3D_0wfyh")
+
 [node name="Basement" type="CSGCombiner3D" parent="World"]
 
+[node name="Intro Room" type="CSGCombiner3D" parent="World/Basement"]
+
+[node name="IntroWall" type="CSGBox3D" parent="World/Basement/Intro Room"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -35.178, -4.43533, 6.61578)
+size = Vector3(0.146029, 3.40638, 5.21139)
+material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="IntroWall2" type="CSGBox3D" parent="World/Basement/Intro Room"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -26.3576, -4.43533, 8.15503)
+size = Vector3(0.208443, 3.40638, 3.90968)
+material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="IntroWall3" type="CSGBox3D" parent="World/Basement/Intro Room"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -30.596, -4.43533, 3.83186)
+size = Vector3(3.79283, 3.40638, 0.253668)
+material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="Door Hole" type="CSGBox3D" parent="World/Basement/Intro Room"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -28.603, -6.26551, 3.7786)
+operation = 2
+size = Vector3(1.16336, 1.56199, 0.298828)
+material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="Tunnels" type="CSGCombiner3D" parent="World/Basement"]
+
+[node name="TunnelWall" type="CSGBox3D" parent="World/Basement/Tunnels"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -30.6282, -4.43533, -2.48131)
+size = Vector3(3.76561, 3.40638, 2.97986)
+material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="TunnelWall2" type="CSGBox3D" parent="World/Basement/Tunnels"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -23.918, -4.43533, 3.34673)
+size = Vector3(0.208443, 3.40638, 7.97596)
+material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="TunnelWall3" type="CSGBox3D" parent="World/Basement/Tunnels"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -25.2152, -4.43533, -5.90262)
+size = Vector3(0.975935, 3.40638, 0.153993)
+material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="TunnelWall4" type="CSGBox3D" parent="World/Basement/Tunnels"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -24.7437, -4.43533, -2.54228)
+size = Vector3(0.577236, 3.40638, 2.99575)
+material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="Door Hole" type="CSGBox3D" parent="World/Basement/Tunnels"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -23.9732, -6.66892, 9.00382)
+operation = 2
+size = Vector3(0.429862, 1.22109, 0.800695)
+material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="TunnelWall5" type="CSGBox3D" parent="World/Basement/Tunnels"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -15.7032, -4.43533, -0.5237)
+size = Vector3(7.15549, 3.40638, 4.70282)
+material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="TunnelWall6" type="CSGBox3D" parent="World/Basement/Tunnels"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -7.57351, -4.3763, 8.91229)
+size = Vector3(0.262852, 3.40638, 3.28601)
+material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="DoorHole" type="CSGBox3D" parent="World/Basement/Tunnels"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -7.57351, -6.76444, 8.84327)
+operation = 2
+size = Vector3(0.262852, 1.38678, 2.07769)
+material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="TunnelWall7" type="CSGBox3D" parent="World/Basement/Tunnels"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, 4.77796, -4.3763, 3.40336)
+size = Vector3(0.300249, 3.40638, 7.94479)
+material = SubResource("StandardMaterial3D_0wfyh")
+
 [node name="Floor" type="CSGBox3D" parent="World/Basement"]
-transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -15.1549, -8.28804, -4.23721)
-size = Vector3(17.0792, 0.148224, 14.3895)
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -15.1549, -8.28804, 3.35839)
+size = Vector3(17.0792, 0.148224, 7.96609)
 material = SubResource("StandardMaterial3D_0wfyh")
 
-[node name="Wall" type="CSGBox3D" parent="World/Basement"]
-transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -35.178, -4.43533, -4.23721)
-size = Vector3(0.146029, 3.40638, 14.3895)
+[node name="Ceiling" type="CSGBox3D" parent="World/Basement"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -21.1741, -2.17021, 3.30247)
+size = Vector3(11.7608, 1.49082, 7.97284)
 material = SubResource("StandardMaterial3D_0wfyh")
 
-[node name="Wall2" type="CSGBox3D" parent="World/Basement"]
-transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -30.7309, -4.43533, 12.777)
-size = Vector3(3.90688, 3.40638, 0.001)
+[node name="BmtWall" type="CSGBox3D" parent="World/Basement"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -16.5239, -4.3763, 12.6334)
+size = Vector3(18.23, 3.40638, 0.139172)
+material = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="BmtWall2" type="CSGBox3D" parent="World/Basement"]
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, -14.9788, -4.43533, -5.83029)
+size = Vector3(17, 3.40638, 0.197388)
 material = SubResource("StandardMaterial3D_0wfyh")
 
 [node name="Player" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.6579, -6.0984, 9.12105)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.6179, -7.1087, 10.2346)
 script = ExtResource("2_0wfyh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]

@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
-@export var speed := 5.0 # mvmt speed
+@export var speed := 4.0 # mvmt speed
 @export var mouse_sens := 0.002 # sens
-@export var jump_force := 7.0 # jump strength
+@export var jump_force := 4.0 # jump strength
 
 var head
 var camera  # ref to cam node
