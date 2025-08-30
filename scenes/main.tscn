@@ -40,6 +40,7 @@ volumetric_fog_emission = Color(0.801307, 0.58207, 0.289543, 1)
 [node name="Main" type="Node3D"]
 
 [node name="World" type="CSGCombiner3D" parent="."]
+visible = false
 use_collision = true
 
 [node name="Floor" type="CSGBox3D" parent="World"]
@@ -48,8 +49,8 @@ size = Vector3(38.5021, 0.358521, 38.0447)
 material = SubResource("StandardMaterial3D_0wfyh")
 
 [node name="Building" type="CSGBox3D" parent="World"]
-transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, 6.931, 18.5278, -18.1438)
-size = Vector3(7.72127, 16.6685, 7.41537)
+transform = Transform3D(2.36497, 0, 0, 0, 2.36497, 0, 0, 0, 2.36497, 6.38558, 18.5278, -18.1438)
+size = Vector3(8.18252, 16.6685, 7.41537)
 material = SubResource("StandardMaterial3D_0wfyh")
 
 [node name="Building2" type="CSGBox3D" parent="World"]
